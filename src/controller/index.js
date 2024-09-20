@@ -1,6 +1,7 @@
 import { Router } from "express";
 import 'dotenv/config.js'
 import userRoute from "./user.js";
+import urlRoute from "./url.js";
 
 const routes = Router()
 
@@ -9,5 +10,6 @@ routes.get('/', (req, res) => {
 });
 
 routes.use('/user', userRoute)
+routes.use('/url', urlRoute)
 
 export default routes;
